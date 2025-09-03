@@ -111,14 +111,5 @@ def client():
                 for i in list_bits:
                     if i == 0:
                         ind = list_0s[random.randint(0, len(list_0s) - 1)]
-                    else:
-                        ind = list_1s[random.randint(0, len(list_1s) - 1)]
-                    pkt = craft(None, 0, packet_len + ind, payload="random")
-                    send(pkt, verbose=False)
-            # send special packet to indicate the end of the message
-            pkt = craft(None, 0, packet_len, payload="random")
-            send(pkt, verbose=False)
-
-
 if __name__ == "__main__":
     client()

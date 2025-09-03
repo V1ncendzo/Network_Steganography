@@ -97,6 +97,7 @@ def server():
     sniff(iface="Wireless LAN adapter Wi-Fi", prn=parse)
 
 
-# Run the server
+# Run the server 
 if __name__ == "__main__":
     server()
+
